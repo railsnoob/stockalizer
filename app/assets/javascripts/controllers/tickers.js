@@ -10,7 +10,8 @@ App.TickersController = Ember.Controller.extend({
 	watchType: function() {
 		console.log('TickersController: New Model Selected' + this.get('selectedItem').get('name'));
 		//TODO  need to change the graph from here.
-		this.transitionToRoute('/'+this.get('selectedItem').get('name'));
+//		this.transitionToRoute('/'+this.get('selectedItem').);
+		this.transitionToRoute('tickers.quotes',this.get('selectedItem').get('name'));
 	}.observes('selectedItem')
 	
 });

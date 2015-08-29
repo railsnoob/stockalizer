@@ -5,11 +5,8 @@ App.Router.reopen({
 })
 
 App.Router.map(function() {
-	this.route('tickers',{path: '/'});
-	this.route('quotes',{path: '/:ticker_id'});
-	//	this.route('tickers',{path: '/'}, function() {
-	//		this.route('ticker',{path: 'tickers/:ticker_id', resetNamespace: true }, function() {
-	//			this.route('quotes', {resetNamespace: true} );
-	//		});
-	//	});
+
+	this.route('index',{path: '/'});
+	this.route('index',{path: '/:ticker_id'});
+
 });

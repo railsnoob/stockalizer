@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./highcharts
 //= require ember
 //= require ember-data
 //= require active-model-adapter

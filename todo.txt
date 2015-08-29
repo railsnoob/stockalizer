@@ -9,6 +9,7 @@ DONE ember setup of models
 DONE get data flowing - tickers
 DONE dropdown to select the tickers
 DONE data flowing - quotes
+DONE nested routes
 get graph connected - highcharts
 make fast - index and error checking
 tests ?

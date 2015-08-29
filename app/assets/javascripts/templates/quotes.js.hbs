@@ -1,5 +1,6 @@
+<h1>Quotes </h1>
 <ul>
-{{#each filteredQuotes as |quote|}}
+{{#each sortedQuotes as |quote|}}
 		<li> {{quote.tickerSymbol}} {{quote.price}} {{quote.pricingDate}} </li>
 {{/each}}
 </ul>

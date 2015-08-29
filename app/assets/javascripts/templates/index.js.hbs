@@ -1,0 +1,19 @@
+<div>
+<select onchange={{action (mut selectedIndex) value="target.selectedIndex"}}>
+      <option disabled selected={{is-not selectedItem}}>Choose one:</option>
+      {{#each tickers as |item|}}
+        <option selected={{is-eq item selectedItem}} value={{item.name}}>{{item.name}}</option>
+      {{/each}}
+</select>
+</div>
+
+
+<div style="width:500px;float:left;">{{high-charts content=chartData class="quotes"}}</div>
+
+<div style="float:left;font-size:12px">
+<ul>
+{{#each filteredQuotes as |quote|}}
+  <li> {{quote.tickerSymbol}} {{quote.price}} {{quote.pricingDate}}  </li>
+{{/each}}
+</ul>
+</div>
