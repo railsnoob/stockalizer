@@ -1,0 +1,10 @@
+install gems - ember
+change default routes
+create models - ticker and quotes
+make api controllers
+make ember default page
+get data flowing- tickers and quotes
+get graph connected - highcharts
+make fast - index and error checking
+tests ?
+push to heroku
