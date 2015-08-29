@@ -1,6 +1,7 @@
-install gems - ember
-change default routes
-create models - ticker and quotes
+DONE install gems - ember, puma, 
+DONE change default routes
+create model  ticker
+create mode quotes
 make api controllers
 make ember default page
 get data flowing- tickers and quotes

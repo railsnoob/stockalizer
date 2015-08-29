@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
   
+  namespace :api do
+  namespace :v1 do
+    get 'quotes/index'
+    end
+  end
+
+  namespace :api do
+  namespace :v1 do
+    get 'tickers/index'
+    end
+  end
+
+  namespace :api do
+  namespace :v1 do
+    get 'tickers/show'
+    end
+  end
+
   get 'home/index'
   
   root to: 'home#index'
