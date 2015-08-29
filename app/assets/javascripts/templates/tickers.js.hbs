@@ -1,0 +1,12 @@
+<select onchange={{action (mut selectedIndex) value="target.selectedIndex"}}>
+      <option disabled selected={{is-not selectedItem}}>Choose one:</option>
+      {{#each model as |item|}}
+        <option selected={{is-eq item selectedItem}} value={{item.name}}>{{item.name}}</option>
+      {{/each}}
+</select>
+
+<ul>
+{{#each model as |ticker|}}
+  <li> {{ticker.name}} </li>
+  {{/each}}
+</ul>

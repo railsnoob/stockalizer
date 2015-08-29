@@ -5,8 +5,10 @@ DONE create mode quotes
 DONE respond_with json
 DONE make api controllers
 DONE make ember default page
-ember setup of models
-get data flowing- tickers and quotes
+DONE ember setup of models
+DONE get data flowing - tickers
+DONE dropdown to select the tickers
+DONE data flowing - quotes
 get graph connected - highcharts
 make fast - index and error checking
 tests ?
