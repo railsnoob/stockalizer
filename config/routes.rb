@@ -1,28 +1,18 @@
 Rails.application.routes.draw do
   
   namespace :api do
-  namespace :v1 do
-    get 'quotes/index'
+    namespace :v1 do
+      resources :tickers, only:["index","show"] ,defaults: {format:'json'} do
+        resources :quotes, only:["index"], defaults: {format:'json'}
     end
   end
-
-  namespace :api do
-  namespace :v1 do
-    get 'tickers/index'
-    end
   end
 
-  namespace :api do
-  namespace :v1 do
-    get 'tickers/show'
-    end
-  end
-
-  get 'home/index'
+get '*path', to: 'home#index'
   
   root to: 'home#index'
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  # The priority is based upon order of creation: first created -> highest priorityd.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"

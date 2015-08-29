@@ -1,8 +1,9 @@
 DONE install gems - ember, puma, 
 DONE change default routes
-create model  ticker
-create mode quotes
-make api controllers
+DONE create model  ticker
+DONE create mode quotes
+respond_with json
+DONE make api controllers
 make ember default page
 get data flowing- tickers and quotes
 get graph connected - highcharts
