@@ -12,8 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery
-//= require jquery_ujs
 //= require ember
 //= require ember-data
 //= require active-model-adapter
@@ -21,6 +19,6 @@
 //= require ./app
 
 // for more details see: http://emberjs.com/guides/application/
-App = Ember.Application.create();
+App = Ember.Application.create({rootElement:'#ember-app'});
 
 //= require_tree .
