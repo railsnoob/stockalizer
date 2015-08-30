@@ -5,6 +5,6 @@ App.Quote = DS.Model.extend({
 	createdAt: DS.attr('date'),
 	ticker: DS.belongsTo('ticker'),
 	prettyDateString: function(){
-		return (this.get('pricingDate').getUTCDate()+1).toString() +"/"+ (this.get('pricingDate').getUTCMonth() + 1).toString() +"/"+ this.get('pricingDate').getUTCFullYear().toString();
+		return (this.get('pricingDate').getUTCMonth() + 1).toString() +"/" +(this.get('pricingDate').getUTCDate()+1).toString()   +"/"+ this.get('pricingDate').getUTCFullYear().toString();
 	}.property('pricingDate')
 });
