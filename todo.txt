@@ -14,5 +14,5 @@ DONE make sure we allow people to look up by name in URL
 DONE get graph connected - highcharts
 DONE backbutton & loading any sub page first.
 DONE make fast - index
-tests 
 DONE push to heroku
+tests

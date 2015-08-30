@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150830150104) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "quotes", force: :cascade do |t|
     t.string   "ticker_symbol",                         null: false
     t.decimal  "price",         precision: 8, scale: 2, null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150830150104) do
     t.datetime "updated_at",                            null: false
   end
 
-  add_index "quotes", ["ticker_id"], name: "index_quotes_on_ticker_id"
+  add_index "quotes", ["ticker_id"], name: "index_quotes_on_ticker_id", using: :btree
 
   create_table "tickers", force: :cascade do |t|
     t.string   "name",       null: false
