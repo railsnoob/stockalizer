@@ -8,9 +8,11 @@ DONE make ember default page
 DONE ember setup of models
 DONE get data flowing - tickers
 DONE dropdown to select the tickers
-DONE data flowing - quotes
+DONE data flowing - quotes 
 DONE nested routes
-get graph connected - highcharts
-make fast - index and error checking
-tests ?
-push to heroku
+DONE make sure we allow people to look up by name in URL
+DONE get graph connected - highcharts
+DONE backbutton & loading any sub page first.
+DONE make fast - index
+tests 
+DONE push to heroku

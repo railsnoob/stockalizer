@@ -1,3 +1,3 @@
 App.TickersRoute = Ember.Route.extend({
-	model:function(){return this.store.findAll('ticker');}
+	model:function(){console.log("tickersRoute");return this.store.findAll('ticker');}
 });

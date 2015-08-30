@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829154410) do
+ActiveRecord::Schema.define(version: 20150830150104) do
 
   create_table "quotes", force: :cascade do |t|
     t.string   "ticker_symbol",                         null: false
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20150829154410) do
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
   end
+
+  add_index "quotes", ["ticker_id"], name: "index_quotes_on_ticker_id"
 
   create_table "tickers", force: :cascade do |t|
     t.string   "name",       null: false
