@@ -9,5 +9,6 @@ App.Router.map(function() {
 	this.route('tickers',{path:'/'}, function() {
 		this.route('quotes',{path: '/tickers/:tickerParam'});
 	});
-	
+
+	this.route("not-found", { path: "*path"});
 });
