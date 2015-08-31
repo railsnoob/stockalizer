@@ -103,7 +103,7 @@ App.HighchartsThemeMixin = Ember.Mixin.create({
       },
       background2: '#E0E0E8',
       global: {
-        timezoneOffset: new Date().getTimezoneOffset()
+        //timezoneOffset: new Date().getTimezoneOffset()
       }
     };
     return Highcharts.setOptions(Highcharts.theme);

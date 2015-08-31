@@ -3,7 +3,7 @@
 <div style="float:left;font-size:12px">
 <ul>
 {{#each sortedQuotes as |quote|}}
-		<li> {{quote.tickerSymbol}} | {{quote.price}} </li>
+		<li> {{quote.tickerSymbol}} | {{quote.price}} | {{quote.prettyDateString}}</li>
 {{/each}}
 </ul>
 </div>
