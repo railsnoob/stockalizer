@@ -35,7 +35,7 @@ namespace :db do
       30.times do 
         Quote.create(
                      ticker_id: ticker_model.id,
-                     ticker_symbol: ticker,
+}                     ticker_symbol: ticker,
                      price: random_price,
                      pricing_date: quote_date(ticker)
                      )

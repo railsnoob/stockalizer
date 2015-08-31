@@ -26,8 +26,8 @@ test:
   adapter: postgresql
   pool: 5
   timeout: 5000
+  encoding: unicode
   database: stockalizer_test
-  username: postgres
 
 # production:
 #  <<: *default
