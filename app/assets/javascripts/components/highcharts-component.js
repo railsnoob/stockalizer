@@ -1,12 +1,14 @@
 App.HighChartsComponent = Ember.Component.extend(App.HighchartsThemeMixin, {
-  classNames:   [ 'highcharts-wrapper' ],
-  content:      undefined,
-  chartOptions: undefined,
-  chart:        null,
+	classNames:   [ 'highcharts-wrapper' ],
+	content:      undefined,
+	chartOptions: undefined,
+	chart:        null,
   
-  buildOptions: Ember.computed('chartOptions', 'content.@each.isLoaded', function() {
+  buildOptions: Ember.computed('content.@each.isLoaded','chartOptions', function() {
     var chartContent, chartOptions, defaults;
-    chartOptions = this.getWithDefault('chartOptions', {});
+
+	  chartOptions = this.getWithDefault('chartOptions', {});
+
     chartContent = this.get('content.length') ? this.get('content') : [
       {
         id: 'noData',
@@ -24,19 +26,25 @@ App.HighChartsComponent = Ember.Component.extend(App.HighchartsThemeMixin, {
     this.drawLater();
     this.buildTheme();
   }).on('didInsertElement'),
-  
+
+  variablesChanged: Ember.observer('content.@each.isLoaded', 'chartOptions','content','buildOptions' ,function() {
+    Ember.run.once(this, 'contentDidChange');
+  }).on('init'),
+
   contentDidChange:  function() {
     var chart;
-	  console.log('HighChartsComponent: contentDidChange()');
     if (!(this.get('content') && this.get('chart'))) {
       return;
     }
-    chart = this.get('chart');
+	  var boptions = this.get('buildOptions').title.text;
+
+      chart = this.get('chart');
     return this.get('content').forEach(function(series, idx) {
       var _ref;
       if ((_ref = chart.get('noData')) != null) {
         _ref.remove();
       }
+	  chart.setTitle({text:boptions});
       if (chart.series[idx]) {
         return chart.series[idx].setData(series.data);
       } else {

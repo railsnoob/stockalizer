@@ -1,10 +1,8 @@
 App.TickersQuotesController = Ember.Controller.extend({
 	sortProperties:['tickerSymbol','pricingDate'],
 	sortedQuotes: Ember.computed.sort("model", "sortProperties"),
-	chartSettings: Ember.computed(function() {
-		return {title:{text:""}};
-	}),
-	chartData: Ember.computed('sortedQuotes','model','tickersController.selectedItem','tickerParam',function() {		
+
+	chartData: Ember.computed('sortedQuotes','model','tickerParam',function() {		
         var m = this.get('sortedQuotes');
 
 		var payload = { id:'Quotes',color:'blue',data:[]};
@@ -14,5 +12,11 @@ App.TickersQuotesController = Ember.Controller.extend({
         });
 		
         return [payload];               
+	}),
+
+	chartSettings: Ember.computed('sortedQuotes','model','tickerParam',function() {
+		var ticker = this.get('tickerParam');
+		console.log("chartSettings: tickerParam",ticker );
+		return {title:{text:ticker}};
 	})
 });
