@@ -6,8 +6,23 @@ App.TickersQuotesRoute = Ember.Route.extend({
 	},
 	
 	model:function(params){
+		console.log("model created - TICKERSQUOTES")
 		var quotes = this.store.peekAll('quote');
 		this.set('tickerParam',params.tickerParam);
-		return quotes.filterBy('tickerSymbol',params.tickerParam);
-	}	
+		return quotes.filterBy('tickerSymbol',params.tickerParam) ? 		quotes.filterBy('tickerSymbol',params.tickerParam) : [] ;
+	},
+
+	activate: function() {
+		this.controllerFor('TickersQuotes').subscribe();
+	},
+
+	deactivate: function() {
+		this.controllerFor('TickersQuotes').unsubscribe();
+	},
+	
+	actions: { 
+		invalidateModel() {
+			this.refresh();
+			}
+		}
 });

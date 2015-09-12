@@ -5,7 +5,6 @@ App.Router.reopen({
 })
 
 App.Router.map(function() {
-
 	this.route('tickers',{path:'/'}, function() {
 		this.route('quotes',{path: '/tickers/:tickerParam'});
 	});

@@ -15,4 +15,24 @@ DONE get graph connected - highcharts
 DONE backbutton & loading any sub page first.
 DONE make fast - index
 DONE push to heroku
-tests
+DONE tests
+make it real time
+   * DONE run redis
+   * DONE add redis push to stockalizer
+   * DONE create a button to create data
+   * DONE send the data to redis after the write
+   * DONE run node js server
+   * DONE create node js to listen to redis
+   * DONE log to console that nod-js server is receivng data
+   * DONE code for node js to push to websocket
+   * DONE ember code to listen to websocket
+   * DONE on getting a push we add it to the data store and reload the
+   route
+   * would be nice to connect to streaming interface for highcharts
+     series.add_data()
+
+1. Add node server to heroku.
+2. Configuration for node server to connect to redis
+3. Add redis configuration to stockalizer.
+
+
