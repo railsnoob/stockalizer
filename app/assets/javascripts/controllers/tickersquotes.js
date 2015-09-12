@@ -9,7 +9,7 @@ App.TickersQuotesController = Ember.Controller.extend({
 			//console.log(this.get('model'));
 			this.store.pushPayload(m);
 			this.send('invalidateModel');
-		}.bind(this))},
+		}.bind(this)); },
 
 	unsubscribe: function() {
 		console.log("unsubscribing to websocket");
