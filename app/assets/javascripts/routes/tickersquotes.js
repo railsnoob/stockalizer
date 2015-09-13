@@ -21,7 +21,7 @@ App.TickersQuotesRoute = Ember.Route.extend({
 	},
 	
 	actions: { 
-		invalidateModel() {
+		invalidateModel:function() {
 			this.refresh();
 			}
 		}
