@@ -1,19 +1,18 @@
 App.WebsocketController = Ember.Controller.extend({
 	_setup: function() {
 		console.log("Websocket controller is started");
-		
 
-		var client = undefined;
+		// var client = undefined;
 		
-		if (process.env.REDISTOGO_URL) {
-			var r = require("url").parse(process.env.REDISTOGO_URL);
-			client = require("redis").createClient(r.port, r.hostname);
-			client.auth(r.auth.split(":")[1]);
-		} else {
-			client = require("redis").createClient();
-		}
+		// if ((typeof process !== 'undefined') && process.env.REDISTOGO_URL) {
+		// 	var r = require("url").parse(process.env.REDISTOGO_URL);
+		// 	client = require("redis").createClient(r.port, r.hostname);
+		// 	client.auth(r.auth.split(":")[1]);
+		// } else {
+		// 	client = require("redis").createClient();
+		// }
 
-		var port = client.get("socket-port");
+		var port = 8080;
 		
 		// Get
 		console.log("socket port:"+port);
