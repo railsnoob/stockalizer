@@ -12,7 +12,7 @@ App.WebsocketController = Ember.Controller.extend({
 		// 	client = require("redis").createClient();
 		// }
 
-		var port = 8080;
+		var port = 20391;
 		
 		// Get
 		console.log("socket port:"+port);
