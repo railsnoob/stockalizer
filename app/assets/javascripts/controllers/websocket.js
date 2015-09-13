@@ -17,7 +17,7 @@ App.WebsocketController = Ember.Controller.extend({
 		// Get
 		console.log("socket port:"+port);
 		
-		websocket = this.websocket = new WebSocket('ws://stockalizer-node.herokuapp.com:'+port);
+		websocket = this.websocket = new WebSocket('ws://stockalizer-node.herokuapp.com');
 
 		this.subscribers = [];
 		this.models = [];
