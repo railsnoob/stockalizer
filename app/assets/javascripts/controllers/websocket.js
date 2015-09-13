@@ -1,7 +1,24 @@
 App.WebsocketController = Ember.Controller.extend({
 	_setup: function() {
 		console.log("Websocket controller is started");
-		websocket = this.websocket = new WebSocket('ws://stockalizer-node.herokuapp.com:8080');
+		
+
+		var client = undefined;
+		
+		if (process.env.REDISTOGO_URL) {
+			var r = require("url").parse(process.env.REDISTOGO_URL);
+			client = require("redis").createClient(r.port, r.hostname);
+			client.auth(r.auth.split(":")[1]);
+		} else {
+			client = require("redis").createClient();
+		}
+
+		var port = client.get("socket-port");
+		
+		// Get
+		console.log("socket port:"+port);
+		
+		websocket = this.websocket = new WebSocket('ws://stockalizer-node.herokuapp.com:'+port);
 
 		this.subscribers = [];
 		this.models = [];
