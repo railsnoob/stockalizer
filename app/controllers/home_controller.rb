@@ -3,6 +3,9 @@ class HomeController < ApplicationController
     
   end
   
+  def new
+  end
+  
   def create_entry
 
     params.require(:ticker_string)
@@ -26,7 +29,7 @@ class HomeController < ApplicationController
     $redis.publish "quote-added", QuoteSerializer.new(q).to_json
     
     flash[:notice] = "Added data"
-    redirect_to home_path
+    redirect_to create_data_path
   end
  
   private

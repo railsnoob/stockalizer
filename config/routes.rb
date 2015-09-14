@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
   get 'home/index' => 'home#index',:as=>"home"
-
-  post 'home/create/:ticker_string' => 'home#create_entry', :as => "ticker_create"
+  
+  get 'home/new' => 'home#new', :as=>"create_data"
+  
+  post 'home/create_data/:ticker_string' => 'home#create_entry', :as => "ticker_create"
   
   namespace :api do
     namespace :v1 do
