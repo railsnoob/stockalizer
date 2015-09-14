@@ -14,6 +14,12 @@ To start the server please run the following command:
 
 And then navigate to http://localhost:3000 .
 
+== Supporting Real Time
+
+* Add RedisToGo Nano instance to your heroku stockalizer app
+* Create a new heroku instance to run the stockalizer-node server. Code is here: https://github.com/railsnoob/stockalizer-node
+* In the stockalizer-node heroku instance make sure to copy the REDISTOGO_URL from your heroku app.
+* Reload your webpages and navigate to /data/new on your rails app. You will find a button to create new quotes and all clients will update in real time. 
 
 === Running the test suite
 
