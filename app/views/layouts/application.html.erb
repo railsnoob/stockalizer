@@ -9,6 +9,11 @@
 <body>
 
 <%= yield %>
+
+<%= javascript_tag do %>
+window.railsEnv = '<%= Rails.env.to_s %>';
+<% end -%>
+
 <div id="ember-app"></div>
 
 </body>

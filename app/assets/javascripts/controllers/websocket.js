@@ -1,8 +1,13 @@
 App.WebsocketController = Ember.Controller.extend({
 	_setup: function() {
 		console.log("Websocket controller is started");
-
-		websocket = this.websocket = new WebSocket('ws://stockalizer-node.herokuapp.com');
+		var websocket = null;
+		
+		if( window.railsEnv == 'development' ) {
+			websocket = this.websocket = new WebSocket('ws://localhost:8080');
+		} else {
+			websocket = this.websocket = new WebSocket('ws://stockalizer-node.herokuapp.com');
+		}
 
 		this.subscribers = [];
 		

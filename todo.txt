@@ -35,4 +35,20 @@ make it real time
 2. Configuration for node server to connect to redis
 3. Add redis configuration to stockalizer.
 
+Heartbeats ...
+  Client sends a heartbeat to the server ...
+  		 startheartbeat() ->
+		     sends htbt
+			 starts timer to do the same...
+         stophtbt
+		     stops the timer ... 
+         when sending/receveing a message we reset the htbt timer as
+		 we don't need it.
+
+Done.
+   
+And if it loses connection it needs to create a connection.
+
+
+
 
