@@ -14,7 +14,15 @@ To start the server please run the following command:
 
 And then navigate to http://localhost:3000 .
 
-== Supporting Real Time
+
+== Supporting Real Time in Dev
+
+* Download and start redis at its default port.
+* Download stockalizer-node server and run it locally. You can find it here: https://github.com/railsnoob/stockalizer-node
+* Open new quote pages at http://localhost/tickers/AAPL
+* Open one browser at http://localhost/data/new . Click onthe "Create" button to create new quotes. Your pages should update in real time. 
+
+== Supporting Real Time in Production
 
 * Add RedisToGo Nano instance to your heroku stockalizer app
 * Create a new heroku instance to run the stockalizer-node server. Code is here: https://github.com/railsnoob/stockalizer-node
