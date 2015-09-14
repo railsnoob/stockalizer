@@ -10,7 +10,7 @@ App.Router.map(function() {
 		this.route('quotes',{path: '/tickers/:tickerParam'});
 	});
 
-	this.route("blank", { path: "/home/new"});
+	this.route("blank", { path: "/data/new"});
 	
 	this.route("not-found", { path: "*path"});
 });
