@@ -20,14 +20,14 @@ And then navigate to http://localhost:3000 .
 * Download and start redis at its default port.
 * Download stockalizer-node server and run it locally. You can find it here: https://github.com/railsnoob/stockalizer-node
 * Open new quote pages at http://localhost/tickers/AAPL
-* Open one browser at http://localhost/data/new . Click onthe "Create" button to create new quotes. Your pages should update in real time. 
+* Open one browser at http://localhost/data/new . Click onthe "Create" button to create new quotes. Your pages should update in real time. (TODO: Move the create button from rails to ember.)
 
 == Supporting Real Time in Production
 
 * Add RedisToGo Nano instance to your heroku stockalizer app. This will create a REDISTOGO_URL config setting.
 * Create a new heroku instance to run the stockalizer-node server. Code is here: https://github.com/railsnoob/stockalizer-node
 * Copy the REDISTOGO_URL config value from your stockazlier app to your stockalizer-node app.
-* Reload your webpages and navigate to /data/new on your rails app. You will find a button to create new quotes and all clients will update in real time. 
+* Reload your webpages and navigate to /data/new on your rails app. You will find a button to create new quotes and all clients will update in real time. (TODO: Move the create button from rails to ember.)
 
 === Running the test suite
 
