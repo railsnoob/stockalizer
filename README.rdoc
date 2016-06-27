@@ -1,3 +1,9 @@
+== What is This?
+This is a sample Ruby on Rails + Ember application with real time updates. I built this for a take home coding problem. Real time wasn't needed but I thought it would be fun to do. 
+
+You will need 2 free heroku acccounts (one for Rails, one for node) and 1 free redis account. 
+
+
 == Installation
 
 To install the system locally please run the following commands after downloading the source:
